@@ -3,4 +3,4 @@
 .settings/
 *.properties
 *.exe
-.project
+*.project
