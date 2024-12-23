@@ -1,5 +1,5 @@
 @pim @smoketest
-Feature: buzz
+Feature: PIM
   En tant que utilisteur je souhaite tester PIM
 
   Background: 

@@ -9,9 +9,9 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @CucumberOptions(
 		
 		features = {"src/spec/features"},
-		plugin = {"pretty", "html:target/report/cucumber-report.html"},
+		plugin = {"pretty", "html:target/report/cucumber-report.html","json:target/report/cucumber.json"},
 		//glue =  {"step_definitions"},
-		tags = ("@adduser"),
+		tags = (" @searchuser2"),
 		monochrome = true ,
 		snippets =  CAMELCASE
 		
