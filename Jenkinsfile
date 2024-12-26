@@ -2,7 +2,7 @@ pipeline {
     agent any  // Utilisation d'un agent disponible
 
     environment {
-        GIT_CREDENTIALS = credentials('my-credentials-id')  // ID des identifiants pour le dépôt Git
+        GIT_CREDENTIALS = credentials('Jenkins')  // ID des identifiants pour le dépôt Git
     }
 
     stages {
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo 'Running Cucumber tests...'
                 // Exécutez vos tests Cucumber. Par exemple, si vous utilisez Maven :
-                sh 'mvn clean test -Dcucumber.options="--plugin json:target/cucumber-report.json"'
+                sh 'mvn clean test -Dcucumber.options="--plugin json:target/report/cucumber.json"'
                 // Pour Gradle, cela pourrait être :
                 // sh './gradlew test --cucumber-plugin json:target/cucumber-report.json'
             }
@@ -42,7 +42,7 @@ pipeline {
             steps {
                 echo 'Publishing Cucumber report...'
                 // Publier le rapport Cucumber en utilisant le plugin Cucumber
-                cucumber 'target/cucumber-report.json'
+                cucumber 'target/report/cucumber.json'
             }
         }
 
