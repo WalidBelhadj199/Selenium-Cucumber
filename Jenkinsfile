@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo 'Running Cucumber tests...'
                 // Exécutez vos tests Cucumber. Par exemple, si vous utilisez Maven :
-                sh 'mvn clean test -Dcucumber.options="--plugin json:target/report/cucumber.json"'
+                bat 'mvn clean test -Dcucumber.options="--plugin json:target/report/cucumber.json"'
                 // Pour Gradle, cela pourrait être :
                 // sh './gradlew test --cucumber-plugin json:target/cucumber-report.json'
             }
