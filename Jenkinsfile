@@ -10,7 +10,7 @@ pipeline {
         stage('Clone') {
             steps {
                 git(
-                    url: 'https://github.com/username/my-private-repo.git',
+                    url: 'https://github.com/WalidBelhadj199/selenium-cucumber.git',
                     credentialsId: GIT_CREDENTIALS
                 )
             }
